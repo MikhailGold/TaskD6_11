@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Список издательств и выпущенных ими книг{% endblock %}
+
+{% block content %}
+    {% for redaction in redactions %}
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">
+                {{ redaction.name }}
+                <ul class="list-group">
+                    {% for book in redaction.books.all %}
+                        <li class="list-group-item list-group-item-success"> {{ book.title }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}

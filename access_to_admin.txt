@@ -1,0 +1,2 @@
+Superuser for login to admin
+login:pass: admin:Ghbdtn
